@@ -23,4 +23,5 @@ This project is a photo gallery that allows users to view a collection of images
 
 ## Contact
 Ruhi Parween - parweenruhi912@gmail.com
+<br>
 Project Link : https://github.com/ruhi19par/Photo-Gallery
