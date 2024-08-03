@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <div class="gallery-wrap">
+        <img src="back.png" id="backBtn">
+        <div class="gallery">
+          <div>
+            <span><img src="image-a.png"></span>
+            <span><img src="image-b.png"></span>
+            <span><img src="image-c.png"></span>
+          </div>
+            <div>
+                <span><img src="image-d.png"></span>
+                <span><img src="image-e.png"></span>
+                <span><img src="image-f.png"></span>
+                
+            </div>
+            <div>
+                <span><img src="image-4.png"></span>
+                <span><img src="image-5.png"></span>
+                <span><img src="image-6.png"></span>
+            </div>
+            <div>
+              <span><img src="image-7.png"></span>
+              <span><img src="image-8.png"></span>
+              <span><img src="image-9.png"></span>
+          </div>
+        </div>
+        <img src="next.png" id="nextBtn">
+    </div>
+    <script>
+        let scrollContainer = document.querySelector(".gallery");
+        let backBtn = document.getElementById("backBtn");
+        let nextBtn = document.getElementById("nextBtn");
+        let scrollWidth = scrollContainer.offsetWidth; 
+      
+        scrollContainer.addEventListener("wheel", (evt) => {
+          evt.preventDefault();
+          scrollContainer.scrollLeft += evt.deltaY;
+        });
+      
+        nextBtn.addEventListener("click", ()=>{
+          scrollContainer.scrollLeft += scrollWidth;
+        });
+      
+        backBtn.addEventListener("click", ()=>{
+          scrollContainer.scrollLeft -= scrollWidth; 
+        });
+      </script>
+</body>
+</html>
